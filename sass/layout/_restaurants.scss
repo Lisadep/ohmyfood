@@ -1,0 +1,37 @@
+.restaurants {
+    padding: 60px 20px;
+    background: $general-background-color;
+    > h1 {
+        margin-bottom: 20px;
+    }
+    > div {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__cards {
+        height: 250px;
+        background: white;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+
+    > img {
+        height: 70%;
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        object-fit: cover;
+    }
+
+    &__container {
+        padding: 14px 12px 10px 14px;
+    }
+    > i {
+        position: relative;
+        bottom: 40px;
+        left: 85%;
+    }
+    }
+
+}
