@@ -1,0 +1,11 @@
+.localisation {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+    width: 100%;
+    padding: 15px 0;
+    background: #EAEAEA;
+    &__txt {
+        font-weight: 500;
+    }
+}
