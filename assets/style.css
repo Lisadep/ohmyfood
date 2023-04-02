@@ -69,6 +69,12 @@ li {
 }
 .functioning > h1 {
   margin-left: 20px;
+  margin-bottom: 26px;
+}
+.functioning > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 .functioning__steps {
   height: 72px;
@@ -84,19 +90,22 @@ li {
 }
 .functioning__steps > i {
   margin-left: 33px;
+  min-width: 16px;
+}
+.functioning__steps > p {
+  min-width: 180px;
 }
 .functioning__number {
   background: #9356DC;
   color: white;
   height: 24px;
-  position: relative;
   border-radius: 100%;
   width: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 48px;
-  left: 13px;
+  position: relative;
+  right: 296px;
 }
 
 /*# sourceMappingURL=style.css.map */
