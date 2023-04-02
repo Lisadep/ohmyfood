@@ -1,0 +1,38 @@
+.functioning {
+    padding: 55px 0;
+
+    > h1 {
+        margin-left: 20px;
+    }
+    
+    &__steps {
+        height: 72px;
+        width: 322px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        gap: 27px;
+        font-weight: 500;
+        background: $general-background-color;
+        display: flex;
+        align-items: center;
+        margin: auto;
+
+        > i {
+            margin-left: 33px;
+        }
+    }
+
+    &__number {
+        background: $primary-color;
+        color: white;
+        height: 24px;
+        position: relative;
+        border-radius: 100%;
+        width: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 48px;
+        left: 13px;
+    }
+}
