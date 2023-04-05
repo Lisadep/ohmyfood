@@ -1,0 +1,22 @@
+.footer {
+    background: $footer-background-color;
+    color: white;
+    padding: 25px;
+
+    > h4 {
+        font-family: 'Shrikhand', cursive;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 5px;
+        > li {
+            font-weight: 500;
+        }
+        > li i {
+            margin-right: 15px;   
+        }
+    }
+}
