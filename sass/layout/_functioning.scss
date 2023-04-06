@@ -29,7 +29,6 @@
             min-width: 16px;
         }
         
-
         > p {
         min-width: 180px;
         }
@@ -46,5 +45,7 @@
         align-items: center;
         position: relative;
         right: 296px;
+        transform: translate(-15px);
+
     }
 }
