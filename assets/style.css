@@ -68,14 +68,13 @@ li {
   }
   to {
     background-color: rgba(0, 0, 0, 0);
+    width: 0;
+    height: 0;
   }
 }
 @keyframes hideLoader {
   to {
-    width: 0;
-    height: 0;
     visibility: hidden;
-    overflow: hidden;
   }
 }
 @keyframes bars {
@@ -93,6 +92,7 @@ li {
   font-weight: 500;
   font-size: 16px;
   color: white;
+  cursor: pointer;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 1;
@@ -156,10 +156,11 @@ li {
 }
 
 .functioning {
-  padding: 55px 0;
+  padding: 55px 30px;
+  max-width: 1190px;
+  margin: auto;
 }
 .functioning > h1 {
-  margin-left: 20px;
   margin-bottom: 26px;
 }
 .functioning > div {
@@ -167,9 +168,16 @@ li {
   flex-direction: column;
   gap: 25px;
 }
+@media screen and (min-width: 1024px) {
+  .functioning > div {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 .functioning__steps {
   height: 72px;
-  width: 322px;
+  width: 100%;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   gap: 27px;
@@ -177,11 +185,13 @@ li {
   background: #F6F6F6;
   display: flex;
   align-items: center;
-  margin: auto;
 }
 .functioning__steps > i {
   margin-left: 33px;
   min-width: 16px;
+}
+.functioning__steps > .fa-store {
+  color: #9356DC;
 }
 .functioning__steps > p {
   min-width: 180px;
@@ -197,28 +207,42 @@ li {
   align-items: center;
   position: relative;
   right: 296px;
-  transform: translate(-15px);
+}
+
+.products {
+  background: #F6F6F6;
 }
 
 .restaurants {
   padding: 60px 20px;
-  background: #F6F6F6;
+  max-width: 1190px;
+  margin: auto;
 }
 .restaurants > h1 {
   margin-bottom: 20px;
+  margin-left: 10px;
 }
 .restaurants > div {
-  gap: 10px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants > div {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 53px;
+    column-gap: 100px;
+  }
 }
 .restaurants__cards {
   height: 250px;
   background: white;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  max-width: 490px;
   min-width: 330px;
+  position: relative;
 }
 .restaurants__cards > img {
   height: 70%;
@@ -226,6 +250,23 @@ li {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   object-fit: cover;
+}
+.restaurants__cards__tag {
+  background: #99E2D0;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 500;
+  height: 30px;
+  width: 80px;
+  border: solid 1px #008766;
+  position: absolute;
+  right: 3%;
+  top: 5%;
+}
+.restaurants__cards__tag > p {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
 }
 .restaurants__cards__container {
   padding: 14px 12px 10px 14px;
@@ -236,13 +277,36 @@ li {
   left: 85%;
 }
 
-.footer {
+footer {
   background: #353535;
+}
+
+.footer {
+  max-width: 1450px;
   padding: 25px;
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  margin: auto;
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    flex-direction: row-reverse;
+    align-items: end;
+    height: 80px;
+  }
+}
+.footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .footer > div {
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 10px;
+  }
 }
 .footer > h4 {
   font-family: "Shrikhand", cursive;
@@ -250,25 +314,43 @@ li {
   font-weight: 400;
   margin-bottom: 16px;
 }
+@media screen and (min-width: 1024px) {
+  .footer > h4 {
+    margin-bottom: 12px;
+    margin-left: 100px;
+  }
+}
 .footer__list {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   font-weight: 500;
 }
-.footer__list > a {
+.footer__list > li a {
   color: white;
 }
-.footer__list > a li i {
+.footer__list > li i {
   margin-right: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .footer__list {
+    flex-direction: row;
+    gap: 15px;
+  }
 }
 .footer__list--part2 {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.footer__list--part2 > a {
+.footer__list--part2 > li a {
   color: white;
+}
+@media screen and (min-width: 1024px) {
+  .footer__list--part2 {
+    flex-direction: row;
+    gap: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

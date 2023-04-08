@@ -1,13 +1,25 @@
+.products {
+    background: $general-background-color;
+}
 .restaurants {
     padding: 60px 20px;
-    background: $general-background-color;
+    max-width: 1190px;
+    margin: auto;
     > h1 {
         margin-bottom: 20px;
+        margin-left: 10px;
     }
     > div {
-        gap: 10px;
+        gap: 20px;
         display: flex;
         flex-direction: column;
+        @media screen and (min-width: 1024px) {
+            display: grid;
+            grid-gap: 25px;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 53px;
+            column-gap: 100px;
+            }
     }
 
     &__cards {
@@ -15,8 +27,8 @@
         background: white;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         border-radius: 15px;
-        max-width: 490px;
         min-width: 330px;
+        position: relative;
 
     > img {
         height: 70%;
@@ -24,6 +36,29 @@
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         object-fit: cover;
+    }
+
+    &__tag {
+        background: $tertiary-color;
+        color: $dark-cyan;
+        font-size: 14px;
+        font-weight: 500;
+        height: 30px;
+        width: 80px;
+        border: solid 1px $dark-cyan;
+        position: absolute;
+        right: 3%;
+        top: 5%;
+        >p {
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+        }
+
+        .fa-heart {
+            // animation: fill-heart ;
+        }
+
     }
 
     &__container {
@@ -37,3 +72,15 @@
     }
 
 }
+
+// @keyframes fill-heart {
+//     0% {
+// 50% {
+
+//     }
+    
+//     }
+//     100% {
+
+//     }
+// }
