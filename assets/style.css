@@ -122,6 +122,31 @@ li {
   color: white;
 }
 
+.restaurants__likeicone {
+  position: relative;
+  bottom: 40px;
+  left: 85%;
+}
+.restaurants__likeicone--empty {
+  position: absolute;
+  color: black;
+}
+.restaurants__likeicone--full {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 400ms;
+}
+.restaurants__likeicone:hover .restaurants__likeicone--full {
+  opacity: 1;
+}
+.restaurants__likeicone:hover .restaurants__likeicone--empty {
+  opacity: 0;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -275,11 +300,6 @@ li {
 .restaurants__cards__container {
   padding: 14px 12px 10px 14px;
 }
-.restaurants__cards > i {
-  position: relative;
-  bottom: 40px;
-  left: 85%;
-}
 
 footer {
   background: #353535;
@@ -428,6 +448,7 @@ footer {
   border-radius: 15px;
   margin-bottom: 12px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 .restaurant__list > p {
   position: relative;
@@ -455,7 +476,22 @@ footer {
   font-weight: 300;
   font-size: 15px;
 }
-.restaurant > i {
+.restaurant__checkbox {
+  opacity: 0;
+  transform: translateX(58px);
+  width: 60px;
+  height: 70px;
+  background-color: #99E2D0;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: right;
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+.restaurant__checkbox > i {
   color: white;
 }
 @keyframes showCheckboxIcone {
