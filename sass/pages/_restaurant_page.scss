@@ -25,6 +25,7 @@
         padding: 13px;
         max-width: 1055px;
         margin: -40px auto auto auto;
+        overflow: hidden;
 
         >a {
             margin: 40px auto;
@@ -51,26 +52,73 @@
     }
 
     &__categories {
+        animation: fadein 2s;
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
         @media screen and (min-width: 1024px) {
             width: 635px;
             margin: auto;
         }
+    }
 
-        >h2 {
-            font-weight: 300;
-            text-transform: uppercase;
-            font-size: 16px;
-            margin-bottom: 25px;
-            margin-top: 35px;
+    &__starter {
+        animation: apparition 2s ease-in 0.5s forwards;
+        opacity: 0;
+    }
 
-            &::after {
-                content: "";
-                display: block;
-                background-color: $tertiary-color;
-                width: 40px;
-                height: 3px;
-                margin-top: 5px;
-            }
+    &__dish {
+        animation: apparition 2s ease-in 1s forwards;
+        opacity: 0;
+    }
+
+    &__dessert {
+        animation: apparition 2s ease-in 1.5s forwards;
+        opacity: 0;
+    }
+
+    @keyframes apparition {
+        0% {
+            opacity: 0;
+        }
+
+        33% {
+            opacity: 0.33;
+        }
+
+        66% {
+            opacity: 0.66;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    &__starter>h2,
+    &__dish>h2,
+    &__dessert>h2 {
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 25px;
+        margin-top: 35px;
+
+        &::after {
+            content: "";
+            display: block;
+            background-color: $tertiary-color;
+            width: 40px;
+            height: 3px;
+            margin-top: 5px;
         }
     }
 
@@ -86,15 +134,23 @@
         >p {
             position: relative;
             top: 35px;
+            right: 15px;
             color: $footer-background-color;
+            transform-origin: right;
+            transition-property: revert;
+            transition-duration: 400ms;
         }
-        
+
         &:hover .restaurant__checkbox {
             transform: scaleX(1);
             opacity: 1;
         }
 
-        &:hover .restaurant__checkbox>i {
+        &:hover .restaurant_item_price {
+            transform: translateX(-58px);
+        }
+
+        &:hover .restaurant__checkbox>a i {
             animation-name: showCheckboxIcone;
             animation-duration: 1s;
             animation-timing-function: linear;
@@ -103,16 +159,23 @@
 
     &__item {
         padding: 12px 15px;
+        overflow: hidden;
 
         >h3 {
             margin-bottom: 5px;
             font-weight: 500;
             font-size: 18px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         >p {
             font-weight: 300;
             font-size: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 
@@ -128,10 +191,16 @@
         justify-content: center;
         align-items: center;
         transform-origin: right;
-        transition-property: transform;
+        transition-property: revert;
         transition-duration: 400ms;
+        position: absolute;
+        right: 13px;
 
-        >i {
+        @media screen and (min-width: 1024px) {
+            right: 220px;
+        }
+
+        >a i {
             color: white;
 
             @keyframes showCheckboxIcone {

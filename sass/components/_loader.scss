@@ -9,7 +9,7 @@
     left: 0;
     background: rgb(0 0 0 / 72%);
     z-index: 9999;
-    animation: showBody 2s ease-in 4s forwards;
+    animation: showBody 2s ease-in 2s forwards;
 }
 
 .load {
@@ -17,26 +17,29 @@
     height: 3vh*7.5;
     display: flex;
     justify-content: space-evenly;
+
     &__bar {
         background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
         height: 100%;
         width: 3vh;
         animation: bars 1000ms backwards ease-in-out infinite;
         animation-direction: alternate;
+
         @for $i from 1 through 5 {
             &--#{$i} {
                 animation-delay: calc(1000ms / 5) * $i;
             }
         }
     }
-    -webkit-animation: hideLoader 0s ease-in 4s forwards;
-    animation: hideLoader 0s ease-in 4s forwards;
+
+    animation: hideLoader 0s ease-in 3s forwards;
 }
 
 @keyframes showBody {
     from {
         background: rgb(0 0 0 / 72%);
     }
+
     to {
         background-color: rgb(0 0 0 / 0%);
         width: 0;
@@ -54,6 +57,7 @@
     0% {
         transform: scaleY(0.5);
     }
+
     100% {
         transform: scaleY(1.0);
     }

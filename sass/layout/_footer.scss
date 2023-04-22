@@ -1,6 +1,7 @@
 footer {
     background: $footer-background-color;
 }
+
 .footer {
     max-width: 1450px;
     padding: 25px;
@@ -13,17 +14,18 @@ footer {
         flex-direction: row-reverse;
         align-items: end;
         height: 80px;
-        }
+    }
 
     >div {
         display: flex;
         flex-direction: column;
         gap: 10px;
+
         @media screen and (min-width: 1024px) {
             flex-direction: row;
             gap: 50px;
             margin-bottom: 10px;
-            }
+        }
     }
 
     >h4 {
@@ -31,10 +33,11 @@ footer {
         font-size: 20px;
         font-weight: 400;
         margin-bottom: 16px;
+
         @media screen and (min-width: 1024px) {
             margin-bottom: 12px;
             margin-left: 100px;
-            }
+        }
     }
 
     &__list {
@@ -46,7 +49,7 @@ footer {
         >li a {
             color: white;
         }
-        
+
         >li i {
             margin-right: 15px;
         }
@@ -54,7 +57,7 @@ footer {
         @media screen and (min-width: 1024px) {
             flex-direction: row;
             gap: 15px;
-            }
+        }
 
         &--part2 {
             display: flex;
@@ -64,10 +67,11 @@ footer {
             >li a {
                 color: white;
             }
+
             @media screen and (min-width: 1024px) {
                 flex-direction: row;
                 gap: 15px;
-                }
+            }
         }
     }
 }

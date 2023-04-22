@@ -1,25 +1,31 @@
 #products {
     background: $general-background-color;
 }
+
 .restaurants {
     padding: 60px 20px;
     max-width: 1190px;
     margin: auto;
-    > h1 {
+    overflow: hidden;
+
+
+    >h1 {
         margin-bottom: 20px;
         margin-left: 10px;
     }
-    > div {
+
+    >div {
         gap: 20px;
         display: flex;
         flex-direction: column;
+
         @media screen and (min-width: 1024px) {
             display: grid;
             grid-gap: 25px;
             grid-template-columns: 1fr 1fr;
             row-gap: 53px;
             column-gap: 100px;
-            }
+        }
     }
 
     &__cards {
@@ -30,35 +36,48 @@
         min-width: 330px;
         position: relative;
 
-    > img {
-        height: 70%;
-        width: 100%;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        object-fit: cover;
-    }
+        .heart__icon {
+            position: relative;
+            bottom: 40px;
+            left: 85%;
 
-    &__tag {
-        background: $tertiary-color;
-        color: $dark-cyan;
-        font-size: 14px;
-        font-weight: 500;
-        height: 30px;
-        width: 80px;
-        border: solid 1px $dark-cyan;
-        position: absolute;
-        right: 3%;
-        top: 5%;
-        >p {
-            display: flex;
-            justify-content: center;
-            margin-top: 5px;
+            @media screen and (min-width: 1024px) {
+                left: 43%;
+            }
+
         }
-    }
 
-    &__container {
-        padding: 14px 12px 10px 14px;
-    }
+        >img {
+            height: 70%;
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            object-fit: cover;
+        }
+
+        &__tag {
+            background: $tertiary-color;
+            color: $dark-cyan;
+            font-size: 14px;
+            font-weight: 500;
+            height: 30px;
+            width: 80px;
+            border: solid 1px $dark-cyan;
+            position: absolute;
+            right: 3%;
+            top: 5%;
+
+            >p {
+                display: flex;
+                justify-content: center;
+                margin-top: 5px;
+            }
+        }
+
+        &__container {
+            padding: 14px 12px 10px 14px;
+        }
+
     }
 
 }
