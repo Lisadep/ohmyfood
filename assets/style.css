@@ -122,7 +122,7 @@ li {
 }
 
 .heart__icon {
-  transform-origin: bottom center;
+  font-size: 20px;
 }
 @media screen and (min-width: 1024px) {
   .heart__icon {
@@ -134,19 +134,21 @@ li {
   }
 }
 .heart__icon > i {
-  color: black;
   cursor: pointer;
-  font-size: 25px;
   position: absolute;
-  transition: all 0.2s ease-in-out;
 }
-.heart__icon > i:hover {
-  background: linear-gradient(#9356DC, #FF79DA);
-  color: white;
-  font-weight: 600;
-  transform: scaleY(1.2);
+
+.heart-full {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 2s;
+}
+.heart-full:hover {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .header {
